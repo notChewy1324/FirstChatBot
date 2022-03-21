@@ -26,10 +26,9 @@ def dogInfo():
     chatbotConversation.append(dog)
 
 print("Loading Chatbot...")
-while (len(chatbotConversation) <= 100): #this controls the length of the list
+while (len(chatbotConversation) <= 15): #this controls the length of the list
     adviceInfo()
     
-
 trainer = ListTrainer(chatbot)
 
 trainer.train(chatbotConversation)
