@@ -3,7 +3,7 @@ from chatterbot.trainers import ListTrainer
 
 chatbot = ChatBot("FirstChatBot")
 
-conversation = [
+chatbotConversation = [
     "Hello",
     "Hi there!",
     "How are you doing?",
@@ -15,7 +15,10 @@ conversation = [
 
 trainer = ListTrainer(chatbot)
 
-trainer.train(conversation)
+trainer.train(chatbotConversation)
 
-response = chatbot.get_response("Good morning!")
-print("ChatBot: " + response)
+while True:
+
+    usr = input("What would you like to say... ")
+    response = chatbot.get_response(f"{usr}")
+    print(f"ChatBot: {response}")
