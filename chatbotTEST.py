@@ -24,15 +24,6 @@ def adviceInfo():
     advice = adviceAPI.json()["slip"]
     advice = advice["advice"]
     chatbotConversation.append(advice)
-    
-def dogInfo():
-    try:
-        dogAPI = requests.get("https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1")
-    except:
-        print("")  
-        
-    dog = dogAPI.json()["fact"]
-    chatbotConversation.append(dog)
 
 print("Loading Chatbot...")
 while (len(chatbotConversation) <= 5): #this controls the length of the list
