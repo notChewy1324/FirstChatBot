@@ -19,5 +19,11 @@ testConversation = [
 trainer = ListTrainer(chatbot)
 trainer.train(testConversation)
 
-response = chatbot.get_response("how is your day")
-print(f"Gracie: {response}")
+# displays response
+TEST_response = chatbot.get_response("tell me something random") # the usr input as str for the chatbot
+print(f"Gracie: {TEST_response}")
+
+# voice
+tts = gtts.gTTS(f"{TEST_response}", lang="en") # change the 'lang' to change the output language
+tts.save("gracieBOT_test_response.mp3")
+playsound("gracieBOT_test_response.mp3")
