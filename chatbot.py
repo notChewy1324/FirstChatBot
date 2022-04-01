@@ -4,9 +4,7 @@ import requests
 
 chatbot = ChatBot("FirstChatBot")
 
-<<<<<<< HEAD
 chatbotConversation = []
-=======
 conversation = [
     "Hello",
     "Hi there!",
@@ -16,7 +14,6 @@ conversation = [
     "Thank you.",
     "You're welcome."
 ]
->>>>>>> parent of 55d26ae (Update chatbot.py)
 
 def adviceInfo():
     try:
@@ -45,7 +42,6 @@ trainer = ListTrainer(chatbot)
 
 trainer.train(conversation)
 
-<<<<<<< HEAD
 def responsePicker(usr):
     if (len(usr) <= 19):
         print("ChatBot: " + str(chatbot.get_response(f"{usr}")))
@@ -57,7 +53,5 @@ while True:
 
     usr = input("What advice would you like... ")
     print(f"{responsePicker(usr)}")
-=======
 response = chatbot.get_response("Good morning!")
 print("ChatBot: " + response)
->>>>>>> parent of 55d26ae (Update chatbot.py)
