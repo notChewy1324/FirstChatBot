@@ -16,14 +16,13 @@ testConversation = [
     "You're welcome."
 ]
 
-trainer = ListTrainer(chatbot)
-trainer.train(testConversation)
-
-# displays response
-TEST_response = chatbot.get_response("tell me something random") # the usr input as str for the chatbot
-print(f"Gracie: {TEST_response}")
-
-# voice
-tts = gtts.gTTS(f"{TEST_response}", lang="en") # change the 'lang' to change the output language
-tts.save("gracieBOT_test_response.mp3")
-playsound("gracieBOT_test_response.mp3")
+# untrained chatbot
+while True:
+    
+     usr = input("type anything... ")
+     TEST_response = chatbot.get_response(f"{usr}")
+     print(f"Gracie: {TEST_response}")
+     
+     tts = gtts.gTTS(f"{TEST_response}", lang="en")
+     tts.save("gracieBOT_test_response.mp3")
+     playsound("gracieBOT_test_response.mp3")
