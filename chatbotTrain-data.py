@@ -2,10 +2,9 @@ from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
 
 chatbot = ChatBot("Jackson")
+trainer = ChatterBotCorpusTrainer(chatbot)
 
-testConvo_data = [
-    "hi there",
-    "hello"
-]
-
-ChatterBotCorpusTrainer.train("chatterbot.corpus.english")
+trainer.train(
+    "chatterbot.corpus.english",
+    "chatterbot.corpus.spanish"
+    )
