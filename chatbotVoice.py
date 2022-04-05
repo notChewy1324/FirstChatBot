@@ -1,19 +1,8 @@
 from chatterbot import ChatBot
 from playsound import playsound
-import requests
 import gtts
 
 chatbot = ChatBot("Gracie")
-
-testConversation = [
-    "Hello",
-    "Hi there!",
-    "How are you doing?",
-    "I'm doing great.",
-    "That is good to hear",
-    "Thank you.",
-    "You're welcome."
-]
 
 # untrained chatbot
 while True:
