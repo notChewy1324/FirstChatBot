@@ -701,7 +701,3 @@ class ContentScraper(object):
         id_to_stack = {stack["stack_id"]: stack for stack in self.stack_list}
         for rule_id, alias in rule_aliases.items():
             id_to_stack[rule_id]["alias"] = alias
-
-    def generate_python_code(self):
-        # deprecated
-        print("This function is deprecated. Please use save() and load() instead.")
