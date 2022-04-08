@@ -1,14 +1,10 @@
-from autoscraper import AutoScraper # from a pip install / will remove when un-needed
-
 from contentScraper import ContentScraper # Will use this as the local custom backend code instead of 3rd party pip
 
-scraper = AutoScraper()
 myScraper = ContentScraper()
 
-url = 'corpusData/corupusTrain_test_2.json' # instead of url make json file
+testURL = 'https://stackoverflow.com/questions/2081586/web-scraping-with-python' # instead of url make json file
 
-wantedInfo = []
+wantedInfo = ["What are metaclasses in Python?"]
 
-result = scraper.build(url, wantedInfo)
-myResult = myScraper.build(url, wantedInfo)
-print(result)
+myResult = myScraper.build(testURL, wantedInfo)
+print(myResult)
