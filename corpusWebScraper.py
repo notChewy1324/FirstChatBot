@@ -1,10 +1,10 @@
-from contentScraper import ContentScraper # Will use this as the local custom backend code instead of 3rd party pip
+from contentScraper import ContentScraper # Will use this as the local custom backend code instead of a 3rd party pip
 
 myScraper = ContentScraper()
 
-testURL = 'https://stackoverflow.com/questions/2081586/web-scraping-with-python' # instead of url make json file
+url = 'https://www.apple.com/'
 
-wantedInfo = ["What are metaclasses in Python?"]
+wantedInfo = ["iPhone"]
 
-myResult = myScraper.build(testURL, wantedInfo)
-print(myResult)
+myResult = myScraper.build(url, wantedInfo)
+print(myResult) # will put into a json file for training use
