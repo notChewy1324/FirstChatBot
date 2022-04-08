@@ -3,10 +3,12 @@ from autoscraper import AutoScraper # from a pip install / will remove when un-n
 from contentScraper import ContentScraper # Will use this as the local custom backend code instead of 3rd party pip
 
 scraper = AutoScraper()
+myScraper = ContentScraper()
 
-url = 'corpusData/corupusTrain_test_2.json'
+url = 'corpusData/corupusTrain_test_2.json' # instead of url make json file
 
 wantedInfo = []
 
 result = scraper.build(url, wantedInfo)
+myResult = myScraper.build(url, wantedInfo)
 print(result)

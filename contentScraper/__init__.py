@@ -1,1 +1,1 @@
-from contentscraper.auto_scraper import ContentScraper
+from contentScraper.content_scraper import ContentScraper
