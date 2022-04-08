@@ -3,8 +3,8 @@ import json
 
 myScraper = ContentScraper()
 
-def dataChecker(scrapedData):
-    if (str(scrapedData) == "[]"):
+def data_checker(scraped_data):
+    if (str(scraped_data) == "[]"):
         print("failed to find related info")
         return False
     else:
@@ -16,9 +16,9 @@ while True:
     usrWants = [input(f"What would you like from {usrURL}? ")]
     
     myResult = myScraper.build(usrURL, usrWants)
-    dataChecker(myResult)
+    data_checker(myResult)
      
-    if dataChecker(myResult) == True:
+    if data_checker(myResult) == True:
         outputFile = open("corpusData/contentScraperDump.json", "a")
         json.dump(myResult, outputFile) # adds as a list but will need json formatting
         print("\n\ncontent added to json file\n\n")
