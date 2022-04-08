@@ -21,10 +21,6 @@ from contentScraper.utils import (
 
 class ContentScraper(object):
     """
-    AutoScraper : A Smart, Automatic, Fast and Lightweight Web Scraper for Python.
-    AutoScraper automatically learns a set of rules required to extract the needed content
-        from a web page. So the programmer doesn't need to explicitly construct the rules.
-
     Attributes
     ----------
     stack_list: list
