@@ -3,11 +3,12 @@ import json
 
 myScraper = ContentScraper()
 
-url = 'https://www.apple.com/'
-
-wantedInfo = ["iPhone"]
-
-myResult = myScraper.build(url, wantedInfo)
-
-outputFile = open("corpusData/contentScraperDump.json", "w")
-json.dump(myResult, outputFile)
+while True:
+    usrURL = input("Paste a url: ")
+    usrWants = [input(f"What would you like from {usrURL}? ")]
+    
+    myResult = myScraper.build(usrURL, usrWants)
+     
+    outputFile = open("corpusData/contentScraperDump.json", "a")
+    json.dump(myResult, outputFile) # adds as a list but will need json formatting
+    print("\n\ncontent added to json file\n\n")
