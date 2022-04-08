@@ -1,0 +1,1 @@
+from contentScraper.auto_scraper import contentScraper
