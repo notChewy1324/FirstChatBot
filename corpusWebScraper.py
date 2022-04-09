@@ -10,9 +10,8 @@ def data_checker(scraped_data):
     else:
         return True
 
-def result_formatter(scraped_result, scraped_url):
-    output_result = [{f"URL: {scraped_url}":f"{scraped_result}"}]
-    return output_result
+def result_formatter(scraped_result):
+    return scraped_result
 
 while True:
     usrURL = input("Paste a url: ")
@@ -23,5 +22,5 @@ while True:
      
     if data_checker(myResult) == True:
         outputFile = open("corpusData/contentScraperDump.json", "a")
-        json.dump(result_formatter(myResult, usrURL), outputFile, indent = 4, sort_keys=True)
+        json.dump(result_formatter(myResult), outputFile, indent = 4, sort_keys=True)
         print("\n\ncontent added to json file\n\n")
