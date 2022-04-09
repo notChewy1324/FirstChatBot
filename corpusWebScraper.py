@@ -11,6 +11,7 @@ def data_checker(scraped_data):
         return True
 
 def result_formatter(scraped_result):
+    # add this to the content_data in the json file
     return scraped_result
 
 while True:
