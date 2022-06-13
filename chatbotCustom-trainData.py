@@ -5,6 +5,6 @@ chatbot = ChatBot("TrainData")
 trainer = ChatterBotCorpusTrainer(chatbot)
 
 trainer.train(
-   # "chatterbot.corpus.english",
+    "chatterbot.corpus.english",
     "corpusData/corupusTrain_test_2.json"
 )
